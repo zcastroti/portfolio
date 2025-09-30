@@ -39,30 +39,29 @@ header {
     background-size: contain;
     background-attachment: fixed;
     box-shadow: inset 0px -10px 10px black;
-    height: 200px; }
+    height: 100px; }
 
 /*-----------------------------
-    Main
+    Subtítulo
 -------------------------------*/
-main {
-    width: 90vw;
-    margin: -150px auto;
-    border-radius: 10px 10px 0px 0px;
-    padding-bottom: 30px;
-    background: whitesmoke; }
-
-main > section { padding: 20px; }
-
-main > section > .subtitulo {
-    font-size: x-large;
+.subtitulo {
+    font-size: larger;
     color: var(--corDestaque);
     text-indent: 10px;
     margin-bottom: 10px; }
 
 /*-----------------------------
+    Container
+-------------------------------*/
+.container {
+    max-width: 600px; margin: auto;
+    padding: 0px 20px 20px;}
+
+/*-----------------------------
     Ficha
 -------------------------------*/
-#ficha {
+.ficha{
+    margin-top: -80px;
     display: flex; flex-flow: column nowrap; }
 
 .fotinha {
@@ -72,7 +71,7 @@ main > section > .subtitulo {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%; 
-    border: 5px solid white;
+    border: 5px solid whitesmoke;
     outline: 5px solid var(--corDestaque); }
 
 .nome {
@@ -121,18 +120,16 @@ main > section > .subtitulo {
 /*-----------------------------
     Formação
 -------------------------------*/
-
-.containerFormacao {
+.dadosFormacao {
     margin-bottom: 20px;
     border-left: solid 2px goldenrod;
     padding-left: 5px; }
 
-.containerFormacao > p {
+.dadosFormacao > p {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start; align-items: center;
     gap: 5px;
-    margin-bottom: 5px;
-}
+    margin-bottom: 5px; }
 
 .anoFormacao::before{
     font-family: 'Material Icons';
@@ -153,19 +150,28 @@ main > section > .subtitulo {
     color: var(--corDestaque); }
 
 
-
-
 /*-----------------------------
     Projetos
 -------------------------------*/
-#projetos > p {
+.projetos { padding-bottom: 60px; }
+
+.projetos > p {
+    
     text-align: center;
     padding: 20px;
     border: dashed 1px #3a3a3a;
     border-radius: 10px; }
 
-@media screen and (min-width: 500px) {
-    main { max-width: 600px; } 
+@media screen and (min-width: 600px) {
+    /*-----------------------------
+        Container Formação
+    -------------------------------*/
+    .gridDuasColunas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); }
+    
+    .dadosFormacao > p { max-width: 250px; }
+
 }
 
 
