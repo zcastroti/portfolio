@@ -45,6 +45,7 @@ header {
     Subtítulo
 -------------------------------*/
 .subtitulo {
+    width: 100%;
     font-size: larger;
     color: var(--corDestaque);
     text-indent: 10px;
@@ -86,17 +87,7 @@ header {
     padding-left: 10px;
     margin-bottom: 20px;
     line-height: 20px;
-    font-size: large;
     text-align: justify; }
-
-.contato {
-    display: flex; flex-flow: row nowrap; 
-    justify-content: center; gap: 20px; }
-
-.contato > a > i { 
-    color: var(--corDestaque);
-    font-size: 40px;
-    cursor: pointer; }
 
 /*-----------------------------
     Vídeo Apresentação
@@ -109,13 +100,23 @@ header {
     border-radius: 10px;
     overflow: hidden; }
 
-.video > iframe {
-    border: none;
+.video > .iframe {
+
+    border: dashed 1px #3a3a3a;
+    border-radius: 10px;
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8; }
+    opacity: 0.8; 
+
+
+display: flex; flex-flow: row nowrap; 
+    justify-content: center; align-items: center;
+}
+    .video > .iframe::after{
+        content: "Vídeo em prcesso de gravação!";
+    }
 
 /*-----------------------------
     Formação
@@ -149,18 +150,31 @@ header {
     content: 'school';
     color: var(--corDestaque); }
 
-
 /*-----------------------------
     Projetos
 -------------------------------*/
-.projetos { padding-bottom: 60px; }
 
 .projetos > p {
-    
     text-align: center;
     padding: 20px;
     border: dashed 1px #3a3a3a;
     border-radius: 10px; }
+
+/*-----------------------------
+    Contato
+-------------------------------*/
+.contato {
+    padding-bottom: 60px;
+    display: flex; flex-flow: row nowrap; 
+    justify-content: center; align-items: center; gap: 20px;
+}
+
+.contato > a > img { 
+    width: 64px;
+    filter: opacity(0.5); }
+.contato > a > img:hover { 
+    transition: .8s;
+    filter: none;}
 
 @media screen and (min-width: 600px) {
     /*-----------------------------
@@ -170,8 +184,8 @@ header {
         display: grid;
         grid-template-columns: repeat(2, 1fr); }
     
-    .dadosFormacao > p { max-width: 250px; }
-
+    .formacao { max-width: 800px; margin: auto;} 
+    .todasFormacoes {
+        display: flex; flex-flow: column; align-items: center;
+    }
 }
-
-
