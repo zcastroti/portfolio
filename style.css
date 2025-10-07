@@ -115,7 +115,7 @@ display: flex; flex-flow: row nowrap;
     justify-content: center; align-items: center;
 }
     .video > .iframe::after{
-        content: "Vídeo em prcesso de gravação!";
+        content: "Vídeo em processo de gravação...";
     }
 
 /*-----------------------------
@@ -188,4 +188,5 @@ display: flex; flex-flow: row nowrap;
     .todasFormacoes {
         display: flex; flex-flow: column; align-items: center;
     }
+
 }
