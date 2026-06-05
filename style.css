@@ -21,6 +21,11 @@
 a { text-decoration: none;
     cursor: pointer; }
 
+b {
+    color: #397b99;
+    font-weight: bold;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -82,6 +87,14 @@ header {
     font-weight: bold;
     color: var(--corDestaque); }
 
+.titulo {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #e3e3e3;
+    margin-bottom: 20px;
+}
+
 .resumoPessoal {
     border-left: solid 2px goldenrod;
     padding-left: 10px;
@@ -101,7 +114,6 @@ header {
     overflow: hidden; }
 
 .video > .iframe {
-
     border: dashed 1px #3a3a3a;
     border-radius: 10px;
     position: absolute;
@@ -153,40 +165,41 @@ display: flex; flex-flow: row nowrap;
 /*-----------------------------
     Projetos
 -------------------------------*/
+.gridProjetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
 
-.projetos > p {
+.gridProjetos h2 {
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.gridProjetos p {
+    text-align: center;
+    padding: 5px;
     border: dashed 1px #3a3a3a;
     border-radius: 10px; }
 
 /*-----------------------------
     Contato
 -------------------------------*/
-.contato {
-    padding-bottom: 60px;
-    display: flex; flex-flow: row nowrap; 
-    justify-content: center; align-items: center; gap: 20px;
-}
 
-.contato > a > img { 
-    width: 64px;
-    filter: opacity(0.5); }
-.contato > a > img:hover { 
-    transition: .8s;
-    filter: none;}
 
 @media screen and (min-width: 600px) {
-    /*-----------------------------
-        Container Formação
-    -------------------------------*/
-    .gridDuasColunas {
+    .gridFormacoes{
         display: grid;
-        grid-template-columns: repeat(2, 1fr); }
-    
-    .formacao { max-width: 800px; margin: auto;} 
-    .todasFormacoes {
-        display: flex; flex-flow: column; align-items: center;
+        grid-template-columns: 1fr 1fr;
     }
 
+    .formacao { max-width: 800px; margin: auto;} 
+
+    .gridProjetos {
+        grid-template-columns: 1fr 1fr;
+    }
 }
